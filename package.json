@@ -1,8 +1,8 @@
 {
   "name": "boilerplate",
-  "version": "2.5.0",
+  "version": "1.0.0",
   "author": "Edd Tidbury",
-  "description": "Boilerplate using React, Browserify, SASS, and Gulp.",
+  "description": "Boilerplate using React, Browserify, SASS, Gulp, and a FTP Sync NPM for simple deployment.",
   "repository": {
     "type": "git",
     "url": "https://github.com/etidbury/boilerplate.git"
