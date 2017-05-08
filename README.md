@@ -1,17 +1,14 @@
-#Boilerplate LiTE
-
 ##Get Started
 
-Note: You will need [NodeJS](https://nodejs.org/en/download/) and Gulp installed. 
+###NPM Scripts
 
-_To install Gulp, please follow the instructions below under heading 'Installing Gulp'._
-
-Then run commands:
-```bash
-npm install
-npm run dev
-```
-_This will install all the required dependencies and run a testing server under [http://localhost:8080/](http://localhost:8080/)_
+| Command                   | Description                                                   |
+|:-------------------------:|:-------------------------------------------------------------:|
+| `npm start`             | Compile assets and start a BrowserSync development server.   | 
+| `npm run dev`             | Compile assets and start a BrowserSync development server.     | 
+| `npm run dev-deploy`      | Sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
+| `npm run deploy`      | Compile assets for the production environment + sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
+| `npm run test`      | Run a virtual JS environment and run an all-round test of project | 
 
 
 ##Phpstorm Configuration
@@ -43,53 +40,3 @@ _This will install all the required dependencies and run a testing server under 
     npm install gulp-cli -g
     ```
 3. Go to **step 1** to check if gulp has been successfully installed.
-
-
-
-
-#####Install LFTP
-
-1. Install Homebrew
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-2. Install LFTP via Homebrew (Make sure you have the latest XCode installed)
-```bash
-brew install homebrew/boneyard/lftp
-```
-
-
-####Quick Reference
-
-#####SailsJS
-
-Create a CRUD Entity e.g. 'message' -> 'MessageController',...
-```bash
-sails generate api [Entity Name]
-```
-
-####Important Notes
-
-When using '.jsx' files within subdirectories in './src/js/', 
-you will need to specify the file extension within the import URI. (e.g. import List from 'component/List.jsx').
-
-
-##Misc.
-
-
-####Setup SailsJS from scratch
-
-Run these commands to install and generate an API example:
-```bash
-> sails generate new server
-> cd server
-> npm install
-> sails generate api [Entity Name]
-```
-_[Entity Name] = The name of the entity to generate controllers and models for ('message' -> 'MessageController',...)_ 
-
-Run the server using this command
-```bash
-> sails lift
-```

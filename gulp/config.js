@@ -1,6 +1,5 @@
 'use strict';
-
-const config = {
+module.exports={
 
   browserPort: 3000,
   UIPort: 3001,
@@ -45,5 +44,3 @@ const config = {
 
 
 };
-
-export default config;
