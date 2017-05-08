@@ -10,7 +10,7 @@
 | `npm run deploy`      | Compile assets for the production environment + sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
 | `npm run test`      | Run a virtual JS environment and run an all-round test of project | 
 
-##Setup
+<h4>Setup</h4>
 
 - Configure your FTP remote server sync.
 
