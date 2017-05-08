@@ -1,6 +1,6 @@
-##Get Started
+#Get Started
 
-###NPM Scripts
+##NPM Scripts
 
 | Command                   | Description                                                   |
 |:-------------------------:|:-------------------------------------------------------------:|
@@ -33,15 +33,16 @@
 
 
 
+
 ###PHPStorm Configuration
 
-#####Setup ECMAScript 6 Environment
+####Setup ECMAScript 6 Environment
 1. Go to
 ```Settings / Languages & Frameworks / Javascript / Javascript language version ```
 
 2. Select ```ECMAscript 6``` from the drop-down menu, then click ```Apply```
 
-#####Install EJS File Support
+####Install EJS File Support
 1. Go to
 ```Plugins / Install Jetbrains Plugin... ```
 
