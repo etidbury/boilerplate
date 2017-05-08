@@ -6,6 +6,8 @@ To quickly get started with this boilerplate, simply
 2. Run a terminal/console within this project directory ```cd myProject```
 2. Download this boilerplate ```git clone https://github.com/etidbury/boilerplate .``` *(include the dot at the end)*
 3. Remove the Git reference ```rm -rf .git```
+4. Download dependencies ```npm install```
+5. Run development server -> 'Hello World' ```npm start```
 
 
 <h2>CLI Commands</h2>
