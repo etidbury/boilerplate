@@ -1,6 +1,7 @@
-#Get Started
+<h1>Get Started</h1>
 
-##NPM Scripts
+
+<h2>NPM Scripts</h2>
 
 | Command                   | Description                                                   |
 |:-------------------------:|:-------------------------------------------------------------:|
@@ -10,7 +11,7 @@
 | `npm run deploy`      | Compile assets for the production environment + sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
 | `npm run test`      | Run a virtual JS environment and run an all-round test of project | 
 
-<h4>Setup</h4>
+<h3>Setup</h3>
 
 - Configure your FTP remote server sync.
 
@@ -34,31 +35,33 @@
 
 
 
-###PHPStorm Configuration
+<h3>PHPStorm Configuration</h3>
 
-####Setup ECMAScript 6 Environment
+<h4>Setup ECMAScript 6 Environment</h4>
 1. Go to
 ```Settings / Languages & Frameworks / Javascript / Javascript language version ```
 
 2. Select ```ECMAscript 6``` from the drop-down menu, then click ```Apply```
 
-####Install EJS File Support
+<h4>Install EJS File Support</h4>
 1. Go to
 ```Plugins / Install Jetbrains Plugin... ```
 
 2. Select ```EJS``` plugin from the search results, then click ```Install``` from the description.
 
 
-###Initial Framework Setup
+<h3>Initial Framework Setup</h3>
 
-####Installing Gulp
+<h4>Installing Gulp</h4>
 
 1. Check if gulp is installed (If it does not print a version, it is not installed).
+    
     ```bash
     gulp -v
     ```
 
 2. If not,
+
     ```bash
     npm install gulp-cli -g
     ```
