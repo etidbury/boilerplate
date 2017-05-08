@@ -22,6 +22,8 @@ To quickly get started with this boilerplate, simply
 
 <h3>Setup/Configuration</h3>
 
+
+
 - Configure your FTP remote server sync.
 
     [deploy/config.yml](deploy/config.yml)
