@@ -76,6 +76,6 @@
 
     "dev-deploy": "NODE_ENV=development node ./deploy/",
     "deploy": "npm run build && NODE_ENV=production node ./deploy/",
-    "push":"git add . && git commit -a && git push"
+    "git":"git add . && git commit -a && git push"
   }
 }
