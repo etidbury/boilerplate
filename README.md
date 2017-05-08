@@ -24,7 +24,12 @@
     
     Add a .JS file to [gulp/tasks](gulp/tasks) folder to run upon Gulp initiation.
 
-- Optional: Change/Remove [api/](api/) folder.
+- Optional: Change/Remove [api/](api/) folder. 
+
+    *Tip: run a quick Apache server by running the following*
+    ```bash
+    $ php -S localhost:XXXX
+    ```
 
 
 
