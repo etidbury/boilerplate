@@ -1,5 +1,12 @@
 <h1>Get Started</h1>
 
+To quickly get started with this boilerplate, simply 
+
+1. Create a project folder ```mkdir myProject```
+2. Run a terminal/console within this project directory ```cd myProject```
+2. Download this boilerplate ```git clone https://github.com/etidbury/boilerplate .``` *(include the dot at the end)*
+3. Remove the Git reference ```rm -rf .git```
+
 
 <h2>CLI Commands</h2>
 
