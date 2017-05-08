@@ -12,13 +12,13 @@ To quickly get started with this boilerplate, simply
 
 <h2>CLI Commands</h2>
 
-| Command                   | Description                                                   |
-|:-------------------------:|:-------------------------------------------------------------:|
+| Command                 | Description                                                   |
+|:-----------------------:|:-------------------------------------------------------------:|
 | `npm start`             | Compile assets and start a BrowserSync development server.   | 
-| `npm run dev`             | Compile assets and start a BrowserSync development server.     | 
-| `npm run dev-deploy`      | Sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
-| `npm run deploy`      | Compile assets for the production environment + sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
-| `npm run test`      | Run a virtual JS environment and run an all-round test of project | 
+| `npm run dev`           | Compile assets and start a BrowserSync development server.     | 
+| `npm run dev-deploy`    | Sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
+| `npm run deploy`        | Compile assets for the production environment + sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
+| `npm run test`          | Run a virtual JS environment and run an all-round test of project | 
 
 <h3>Setup</h3>
 
