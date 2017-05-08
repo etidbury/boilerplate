@@ -10,8 +10,25 @@
 | `npm run deploy`      | Compile assets for the production environment + sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
 | `npm run test`      | Run a virtual JS environment and run an all-round test of project | 
 
+##Setup
 
-##Phpstorm Configuration
+- Configure your FTP remote server sync.
+
+    [deploy/config.yml](deploy/config.yml)
+
+- Configure your Gulp build structure.
+
+    [gulp/config.js](gulp/config.js)
+
+- Optional: Add new Gulp tasks
+    
+    Add a .JS file to [gulp/tasks](gulp/tasks) folder to run upon Gulp initiation.
+
+- Optional: Change/Remove [api/](api/) folder.
+
+
+
+###PHPStorm Configuration
 
 #####Setup ECMAScript 6 Environment
 1. Go to

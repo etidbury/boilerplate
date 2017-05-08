@@ -12,7 +12,8 @@
     "browserify",
     "react",
     "sass",
-    "boilerplate"
+    "boilerplate",
+    "deploy"
   ],
   "devDependencies": {
     "babel-core": "^6.3.15",

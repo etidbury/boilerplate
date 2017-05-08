@@ -9,6 +9,8 @@ header("Access-Control-Allow-Origin: *");
 
 
 /*---polyfills---*/
+
+///for PHP <5.3
 if (!function_exists('http_response_code')) {
     function http_response_code($code = NULL) {
 
@@ -116,9 +118,9 @@ function json($data=array(),$code=200) {
 /*------db-------*/
 define("DB_TYPE","mysql");
 define("DB_HOST","127.0.0.1");
-define("DB_NAME","wmg_vantquiz_db");
-define("DB_USER",'root');
-define("DB_PWD",'');
+define("DB_NAME","");
+define("DB_USER","");
+define("DB_PWD","");
 
 class DB extends PDO {
 
