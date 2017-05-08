@@ -1,5 +1,6 @@
 import React              from 'react';
-
+import Header from '../component/Header';
+import Footer from '../component/Footer';
 
 export default class App extends React.Component {
 
@@ -13,8 +14,11 @@ export default class App extends React.Component {
         return (
             <div>
 
+                <Header />
+
                 {this.renderChildren()}
 
+                <Footer />
             </div>
         );
     }
