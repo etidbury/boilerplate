@@ -8,8 +8,7 @@ dev:
   #folder to be synced on the remote server
   path: /
   #files which you dont wish to add/change on the remote server
-  ignore_files:
-      - .htaccess
+  ignore_files: false
 
 #PRODUCTION
 prod:
