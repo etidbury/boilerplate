@@ -44,7 +44,7 @@ To quickly get started with this boilerplate, simply
 
 
 
-<h3>PHPStorm Configuration</h3>
+<h3>Optional: PHPStorm Configuration</h3>
 
 <h4>Setup ECMAScript 6 Environment</h4>
 1. Go to
@@ -57,21 +57,3 @@ To quickly get started with this boilerplate, simply
 ```Plugins / Install Jetbrains Plugin... ```
 
 2. Select ```EJS``` plugin from the search results, then click ```Install``` from the description.
-
-
-<h3>Initial Framework Setup</h3>
-
-<h4>Installing Gulp</h4>
-
-1. Check if gulp is installed (If it does not print a version, it is not installed).
-    
-    ```bash
-    gulp -v
-    ```
-
-2. If not,
-
-    ```bash
-    npm install gulp-cli -g
-    ```
-3. Go to **step 1** to check if gulp has been successfully installed.
