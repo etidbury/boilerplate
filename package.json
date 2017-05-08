@@ -75,8 +75,6 @@
     "dev": "NODE_ENV=development ./node_modules/.bin/gulp dev",
 
     "dev-deploy": "NODE_ENV=development node ./deploy/",
-    "deploy": "npm run build && NODE_ENV=production node ./deploy/",
-
-    "git":"git commit -a -m $1 && git push"
+    "deploy": "npm run build && NODE_ENV=production node ./deploy/"
   }
 }
