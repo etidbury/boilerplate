@@ -20,7 +20,7 @@ To quickly get started with this boilerplate, simply
 | `npm run deploy`        | Compile assets for the production environment + sync files and folders within your specified build/distribution folder to a remote server via FTP. | 
 | `npm run test`          | Run a virtual JS environment and run an all-round test of project | 
 
-<h3>Setup</h3>
+<h3>Setup/Configuration</h3>
 
 - Configure your FTP remote server sync.
 
