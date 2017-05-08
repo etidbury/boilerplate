@@ -14,11 +14,7 @@ export default class Home extends React.Component {
         return (
             <DocumentTitle title="Home">
                 <section className="home-page">
-
-                    <div>
-                        Home
-                    </div>
-
+                    Homepage.
                 </section>
             </DocumentTitle>
         );
