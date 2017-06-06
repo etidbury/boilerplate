@@ -29,6 +29,7 @@
     "chai": "^3.5.0",
     "change-case": "^2.3.1",
     "compass-sass-mixins": "^0.12.7",
+    "cross-env": "^5.0.0",
     "debowerify": "^1.3.1",
     "del": "^2.2.0",
     "eslint-plugin-react": "^5.1.1",
@@ -71,12 +72,12 @@
     "yargs": "^3.27.0"
   },
   "scripts": {
-    "lint": "NODE_ENV=test ./node_modules/.bin/gulp lint",
-    "test": "NODE_ENV=test ./node_modules/.bin/gulp test",
-    "build": "NODE_ENV=production ./node_modules/.bin/gulp prod",
-    "start": "NODE_ENV=development ./node_modules/.bin/gulp dev",
-    "dev": "NODE_ENV=development ./node_modules/.bin/gulp dev",
-    "dev-deploy": "NODE_ENV=development node ./deploy/",
-    "deploy": "npm run build && NODE_ENV=production node ./deploy/"
+    "lint": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/gulp lint",
+    "test": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/gulp test",
+    "build": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/gulp prod",
+    "start": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/gulp dev",
+    "dev": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/gulp dev",
+    "dev-deploy": "./node_modules/.bin/cross-env NODE_ENV=development node ./deploy/",
+    "deploy": "npm run build && ./node_modules/.bin/cross-env NODE_ENV=production node ./deploy/"
   }
 }
