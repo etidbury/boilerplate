@@ -1,4 +1,6 @@
 #DEVELOPMENT
+directory: build/
+
 dev:
   host:
   username:

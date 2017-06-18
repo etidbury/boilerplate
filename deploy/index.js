@@ -3,7 +3,6 @@
 const fs=require('fs');
 const yaml = require('js-yaml');
 const ftpSync = require('ftpsync');
-const gulpConfig =require('../gulp/config.js');
 
 let conf;
 
@@ -39,13 +38,13 @@ ftpSync.settings = {
     port: conf.port||21, // defaults to 21
     user: conf.username,
     pass: conf.password,
-    local: gulpConfig.buildDir,
+    local: conf.directory,
     remote: conf.path,
     //connections:"2",
     ignore:conf.ignore_files||[]
 };
 
-console.log('Syncing build folder',gulpConfig.buildDir);
+console.log('Syncing build folder',conf.directory);
 
 ftpSync.run(function(err, result) {
 
