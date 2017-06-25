@@ -19,7 +19,7 @@ if (!conf){
     return;
 }
 
-const mode=process.env.NODE_ENV==="production"?"prod":"dev";
+const mode=process.env.NODE_ENV==="production"||process.env.NODE_ENV==="prod"?"prod":"dev";
 
 if (!conf[mode]){
     console.error("Configuration not specified for environment:",mode);

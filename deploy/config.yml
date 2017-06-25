@@ -1,15 +1,17 @@
-#DEVELOPMENT
+#directory to be synced with remote server
 directory: build/
 
+#DEVELOPMENT
 dev:
   host:
   username:
   password:
   port: 21
 
-  #folder to be synced on the remote server
+  #destination folder on the remote server
   path: /
-  #files which you dont wish to add/change on the remote server
+
+  #files you wish to ignore when uploading to the remote server.
   ignore_files: false
 
 #PRODUCTION
@@ -19,8 +21,9 @@ prod:
   password:
   port: 21
 
-  #folder to be synced on the remote server
+  #destination folder on the remote server
   path: /
-  #files which you dont wish to add/change on the remote server
+
+  #files you wish to ignore when uploading to the remote server.
   ignore_files:
       - .htaccess

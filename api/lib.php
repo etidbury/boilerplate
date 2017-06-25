@@ -9,7 +9,6 @@ header("Access-Control-Allow-Origin: *");
 
 
 /*---polyfills---*/
-
 ///for PHP <5.3
 if (!function_exists('http_response_code')) {
     function http_response_code($code = NULL) {
