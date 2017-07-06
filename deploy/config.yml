@@ -1,29 +1,30 @@
 #directory to be synced with remote server
-directory: build/
+
 
 #DEVELOPMENT
 dev:
-  host:
-  username:
-  password:
-  port: 21
+    host: 457elmp02.blackmesh.com
+    username: etidbury
+    password: mmTctQuFAzsbQz
+    port: 21
 
-  #destination folder on the remote server
-  path: /
+    #destination folder on the remote server
+    path: /wbr-uk/iamrationale.com/public/preorder
 
-  #files you wish to ignore when uploading to the remote server.
-  ignore_files: false
+    #files you wish to ignore when uploading to the remote server.
+    ignore_files:
+        - .htaccess
 
 #PRODUCTION
 prod:
-  host:
-  username:
-  password:
-  port: 21
+    host: 457elmp02.blackmesh.com
+    username: etidbury
+    password: mmTctQuFAzsbQz
+    port: 21
 
-  #destination folder on the remote server
-  path: /
+    #destination folder on the remote server
+    path: /wbr-uk/iamrationale.com/public/preorder
 
-  #files you wish to ignore when uploading to the remote server.
-  ignore_files:
-      - .htaccess
+    #files you wish to ignore when uploading to the remote server.
+    ignore_files:
+          - .htaccess

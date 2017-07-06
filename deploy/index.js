@@ -4,6 +4,7 @@ const fs=require('fs');
 const yaml = require('js-yaml');
 const ftpSync = require('ftpsync');
 
+
 let conf;
 
 try {
@@ -38,13 +39,12 @@ ftpSync.settings = {
     port: conf.port||21, // defaults to 21
     user: conf.username,
     pass: conf.password,
-    local: conf.directory,
+    local: './build/',
     remote: conf.path,
     //connections:"2",
     ignore:conf.ignore_files||[]
 };
 
-console.log('Syncing build folder',conf.directory);
 
 ftpSync.run(function(err, result) {
 
