@@ -18,3 +18,5 @@ Thumbs.db
 !_remote_backup
 
 /build/
+
+.build_tmp

@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "boilerplate",
   "version": "0.0.1",
   "author": "",
   "description": "",
@@ -27,7 +27,8 @@
     "react": "15.6.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^15.5.4",
-    "react-router": "3.0.4"
+    "react-router": "3.0.4",
+    "spacecms": "0.0.9"
   },
   "scripts": {
     "lint": "gulplite lint",

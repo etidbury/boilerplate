@@ -13,7 +13,7 @@
     "node": true,
   },
   "rules": {
-    "quotes": [2, "single"],
+  //  "quotes": [2, "single"],
     "eol-last": 2,
     "no-debugger": 1,
     "no-mixed-requires": 0,
@@ -22,8 +22,8 @@
     "no-trailing-spaces": 0,
     "no-extra-boolean-cast": 0,
     "no-undef": 2,
-    "no-unused-vars": 2,
-    "no-var": 2,
+    "no-unused-vars": 1,
+    "no-var": 1,
     "prefer-const": 2,
     "new-cap": 0,
     "camelcase": 2,
@@ -31,6 +31,6 @@
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 2,
-    "react/prop-types": 2
+    "react/prop-types": 1
   }
 }
