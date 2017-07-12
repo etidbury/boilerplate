@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 6.11.0
+
+
+dependencies:
+  override:
+    - npm install --prod
+
+
+notify:
+  webhooks:
+    # A list of hook hashes, containing the URL field
+    - url: https://example.com/hooks/circle
+
