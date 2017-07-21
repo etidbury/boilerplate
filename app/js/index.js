@@ -9,10 +9,6 @@ if ( process.env.NODE_ENV !== 'production' ) {
     // Enable React devtools
     window.React = React;
 
-    require('spacecms')(function onUpdateProjectSpaces(spaces){
-        console.info("SpaceCMS:","Updated Spaces",spaces);//fordebug: debug print
-    });
-
 
 }
 
