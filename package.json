@@ -36,9 +36,7 @@
     "build": "gulplite prod",
     "start": "gulplite dev",
     "dev": "gulplite dev",
-    "prod": "gulplite prod",
-    "dev-deploy": "./node_modules/.bin/cross-env NODE_ENV=development node ./deploy/",
-    "deploy": "npm run build && ./node_modules/.bin/cross-env NODE_ENV=production node ./deploy/"
+    "prod": "gulplite prod"
   },
   "license": "MIT"
 }
