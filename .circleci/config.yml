@@ -1,0 +1,135 @@
+# Stage and Production Node CircleCI 2.0 configuration file
+#
+# @author Edd Tidbury
+# @version 1.0.0
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:7.10
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/repo
+
+    branches:
+      only:
+        - master
+        - production
+
+    environment:
+      #todo: improve security by authorising stage and production server with GitHub instead
+      GITHUB_TOKEN: 9d67a868ba27c25a2f4a5f5f0d1c42550a014528
+      SSH_USER: ec2-user
+      HOST_BASE_DIR: /home/ec2-user/www/
+      STAGING_HOST_URL: ec2-35-176-125-103.eu-west-2.compute.amazonaws.com
+      PRODUCTION_HOST_URL: ec2-35-176-125-103.eu-west-2.compute.amazonaws.com
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+      - run: sudo yarn global add gulplite
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # run tests!
+      - run: yarn test
+      - run: yarn lint
+
+      # avoid initial confirmation message when first connecting via ssh
+      - run: ssh-keyscan ${STAGING_HOST_URL} >> ~/.ssh/known_hosts
+      - run: ssh-keyscan ${PRODUCTION_HOST_URL} >> ~/.ssh/known_hosts
+
+      - deploy:
+          name: Deploy App
+          command: |
+
+
+             if [ "${CIRCLE_BRANCH}" == "master" ]; then
+
+                ACTIVE_HOST_URL=$STAGING_HOST_URL
+
+              elif [ "${CIRCLE_BRANCH}" == "production" ]; then
+
+                ACTIVE_HOST_URL=$PRODUCTION_HOST_URL
+
+              else
+                echo "Not master or production branch. No active host set"
+              fi
+
+
+              GITHUB_REPO_URL="https://$GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git"
+
+              ssh ${SSH_USER}@${ACTIVE_HOST_URL} bash -c "'
+                if [ ! -d "$HOST_BASE_DIR$CIRCLE_PROJECT_REPONAME.git" ]; then
+
+                    mkdir -p "$HOST_BASE_DIR$CIRCLE_PROJECT_REPONAME.git"
+
+                    cd "$HOST_BASE_DIR"
+
+
+                    pwd
+
+                    #git init --bare || echo "Already initiated repository. Continuing..."
+
+
+                    echo "$GITHUB_REPO_URL"
+
+                    git clone "$GITHUB_REPO_URL" --branch "$CIRCLE_BRANCH" --single-branch "$CIRCLE_PROJECT_REPONAME.git"
+
+                fi
+
+                cd "$HOST_BASE_DIR$CIRCLE_PROJECT_REPONAME.git"
+
+                pwd
+
+
+                git checkout --force ${CIRCLE_BRANCH}
+                git fetch "$GITHUB_REPO_URL" ${CIRCLE_BRANCH} +refs/heads/*:refs/heads/* --prune
+
+                echo "Project retrieved from Github"
+
+
+                pm2 stop $CIRCLE_PROJECT_REPONAME.git || echo "Failed to stop pm2 instance. Ignoring..."
+                pm2 start app.js --name "$CIRCLE_PROJECT_REPONAME.git"
+
+
+              '"
+
+              pwd
+
+
+
+              git remote -v
+
+
+
+
+
+
+
+
+
+
+
+
+
+
